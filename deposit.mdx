@@ -1,0 +1,48 @@
+---
+title: "Vault Deposits (Minting Shares)"
+description: "Minting AVLT tokens"
+---
+
+
+Depositing into the Vault allows users to convert their stablecoins (such as USDT) into AVLT vault shares. These shares represent proportional ownership of the Vault’s underlying strategy portfolio.
+
+---
+
+## Overview
+
+The Vault uses a tokenized NAV model:
+
+- Users deposit assets (USDT).
+- The Vault calculates the number of shares to mint using the latest price per share (PPS).
+- Shares represent proportional ownership of the vault assets.
+- NAV updates come from the NavOracle contract.
+
+---
+
+## What Is a Deposit?
+
+A deposit is when a user sends USDT into the Vault contract and receives AVLT shares in return. These shares:
+
+- Represent ownership in the Vault
+- Automatically reflect NAV growth
+- Can be redeemed later for USDT
+
+---
+
+## Deposit Steps
+
+1. Connect your wallet.
+2. Enter the amount of USDT to deposit.
+3. Approve USDT (only on first deposit).
+4. Confirm the deposit transaction.
+5. Receive AVLT tokens immediately.
+
+Your share count remains constant, and your value grows through NAV updates.
+
+---
+
+## What You Receive
+
+- AVLT shares (representing vault ownership)
+- Exposure to the NAV growth of the strategies
+- On-chain, transparent accounting
