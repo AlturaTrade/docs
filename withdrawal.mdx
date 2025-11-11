@@ -1,0 +1,149 @@
+---
+title: "Withdrawals"
+description: "Redeeming Vault Shares"
+---
+
+Withdrawals allow users to convert their AVLT vault shares back into USDT.\
+The Vault supports **two withdrawal modes**, depending on real-time liquidity conditions:
+
+1. **Instant Redeem** — Same-transaction withdrawal when the vault has enough liquid USDT.
+2. **Queued Redeem** — Withdrawal request is placed in a queue when instant liquidity is not available. Users claim funds later.
+
+---
+
+## Overview
+
+When you withdraw AVLT shares, the vault returns USDT based on the latest NAV (price per share).\
+Your shares are **burned**, and you receive USDT either:
+
+- Immediately (Instant Redeem), or
+- After the vault processes your queued request (Queued Redeem)
+
+You are always withdrawing at fair value based on NAV.
+
+---
+
+# Instant Redeem (Normal Redeem)
+
+If the vault currently holds enough liquid USDT to satisfy your withdrawal, the system performs an **Instant Redeem**.
+
+### How It Works
+
+1. You enter the amount of **AVLT shares** you want to redeem.
+2. The app displays the **USDT amount** you will receive based on current NAV.
+3. You confirm the transaction.
+4. The vault immediately:
+   - Burns your AVLT shares
+   - Sends USDT to your wallet
+   - Completes the withdrawal in a single transaction
+
+### When Instant Redeem Is Available
+
+Instant withdrawals occur when:
+
+- The vault’s liquid balance ≥ the withdrawal amount
+- No withdrawal cooldown or pause is active
+
+---
+
+# Queued Redeem (When Liquidity Is Low)
+
+If the vault **does not have enough liquid USDT** at the moment of your withdrawal request, it automatically switches to **Queued Redeem**.
+
+Your withdrawal is placed in a **withdrawal queue**, and funds become available to claim later.
+
+### Why Queued Redeem Exists
+
+The vault may have assets actively deployed in strategies or other venues.\
+To maintain safety and ensure fair processing, large withdrawals or withdrawals during low liquidity periods must be **queued** until the vault updates liquidity or pulls funds back.
+
+---
+
+## How Queued Redeem Works
+
+1. You initiate a withdrawal with the desired **AVLT share amount**.
+2. The system detects insufficient instant liquidity.
+3. Your request is placed into the withdrawal queue.
+4. You receive a **request ID** representing your position in the queue.
+5. Your AVLT shares are locked (you cannot transfer or reuse them).
+6. The vault replenishes liquidity automatically or via periodic operator actions.
+7. When your request becomes fully liquid, you can **claim** the USDT.
+
+---
+
+## Claiming a Queued Withdrawal
+
+Once your withdrawal request is ready:
+
+1. The UI shows it as **“Claimable”**.
+2. You click **Claim**.
+3. The vault:
+   - Transfers USDT to your wallet
+   - Completes your withdrawal
+   - Unlocks your request slot
+4. You now hold USDT again.
+
+Claiming is a **separate transaction** from queue creation.
+
+---
+
+## When Queued Redeem Triggers Automatically
+
+Queued withdrawal activates if:
+
+- Instant liquidity \< required USDT
+- Large withdrawals occur during active strategy allocation
+- The vault is temporarily operating with reduced liquid reserves
+- Safety conditions require queued processing
+
+Users do not need to manually choose the queue.\
+The system chooses the correct path automatically.
+
+---
+
+# Comparing Both Withdrawal Modes
+
+| Feature         | Instant Redeem          | Queued Redeem                              |
+| --------------- | ----------------------- | ------------------------------------------ |
+| When it occurs  | Liquidity is sufficient | Liquidity is insufficient                  |
+| Completion time | Immediate               | Upto 24 hours, after liquidity replenishes |
+| Share handling  | Burned instantly        | Locked until claim                         |
+| USDT transfer   | Same transaction        | Claim transaction required                 |
+| User action     | 1 transaction           | 2 transactions (queue → claim)             |
+
+---
+
+# User Experience Summary
+
+### Instant Redeem
+
+- Fast
+- Simple
+- One click
+- You receive USDT immediately
+
+### Queued Redeem
+
+- Safest option when liquidity is low
+- Ensures fair, FIFO processing
+- Funds are claimable as soon as vault liquidity is restored
+
+---
+
+# Best Practices for Users
+
+- Smaller withdrawals are more likely to be instant.
+- Large withdrawals or bulk exits may go into the queue.
+- Check the **“In Progress”** tab to monitor pending claims.
+- Claims do not expire — you can claim anytime after they become available.
+
+---
+
+# Summary
+
+The Vault offers a flexible and secure withdrawal system:
+
+- **Instant Redeem** provides immediate liquidity when available.
+- **Queued Redeem** ensures safe, orderly withdrawals when instant liquidity is not possible.
+
+Both methods guarantee that users always receive fair USDT value based on the latest NAV.
