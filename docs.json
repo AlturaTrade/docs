@@ -18,7 +18,8 @@
             "pages": [
               "index",
               "deposit",
-              "withdrawal"
+              "withdrawal",
+              "AVLT"
             ]
           },
           {
