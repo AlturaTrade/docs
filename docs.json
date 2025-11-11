@@ -71,14 +71,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Twitter",
+          "href": "https://x.com/alturatrade",
+          "icon": "bird"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "href": "https://discord.gg/EpE9pUtMBp",
+          "icon": "discord"
+        },
+        {
+          "anchor": "Telegram",
+          "href": "https://t.me/AlturaGlobal",
+          "icon": "paper-plane"
         }
       ]
     }
