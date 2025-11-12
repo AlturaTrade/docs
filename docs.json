@@ -33,23 +33,6 @@
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Twitter",
-          "href": "https://x.com/alturatrade",
-          "icon": "bird"
-        },
-        {
-          "anchor": "Discord",
-          "href": "https://discord.gg/EpE9pUtMBp",
-          "icon": "discord"
-        },
-        {
-          "anchor": "Telegram",
-          "href": "https://t.me/AlturaGlobal",
-          "icon": "paper-plane"
-        }
-      ]
     }
   },
   "logo": {
