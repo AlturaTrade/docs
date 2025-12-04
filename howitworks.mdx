@@ -1,0 +1,81 @@
+---
+title: "Altura Vault Working"
+description: "How the Altura Vault Works"
+---
+
+## Overview
+
+Altura wraps its multi-strategy system into a single, streamlined vault experience.\
+Users deposit USDT on **HyperEVM**, receive vault shares, and earn yield as the protocol executes strategies automatically in the background.
+
+---
+
+## **Deposit Process & Share Issuance**
+
+When a user deposits USDT into the Altura Vault:
+
+- The protocol mints **vault shares** that reflect proportional ownership.
+- Share count remains constant unless users deposit or withdraw.
+
+All performance is reflected through changes in **PPS (Price-Per-Share)**.
+
+---
+
+## **Price-Per-Share (PPS) - How Performance Is Measured**
+
+Altura uses PPS as its core accounting mechanism.
+
+- As strategies generate yield, PPS increases.
+- User balances grow proportionally.
+- No manual claiming or compounding is required.
+- All value creation is embedded directly in the PPS.
+
+This creates transparent, on-chain performance attribution.
+
+---
+
+## **Oracle-Governed PPS Updates**
+
+PPS updates occur through authenticated oracle reporters and include:
+
+- **Movement limits** (prevents abnormal jumps)
+- **Freshness checks** (reject stale data)
+- **Timestamp validation** (no future blocks)
+- **Reporter authentication** (only authorized oracles can update)
+
+These safeguards ensure PPS reflects _real_ performance only.
+
+---
+
+## **Withdrawals - Dual-Path System**
+
+Altura supports two withdrawal paths for user flexibility and protocol stability:
+
+### **Path 1 - Instant Withdrawal**
+
+Executed **immediately** if the withdrawal amount is **≤ the vault’s liquid balance**.
+
+### **Path 2 - Epoch Withdrawal**
+
+If the requested amount **exceeds available liquidity**, the withdrawal enters the current epoch.\
+Once the epoch concludes, funds become claimable.
+
+### **Minimum Claim Period: 6 Hours**
+
+All withdrawals (instant & epoch) require a **6-hour minimum period** after a new deposit before they can be claimed.
+
+This protects the system from timing exploits.
+
+---
+
+## **Full Operational Lifecycle**
+
+A simplified overview of the vault lifecycle:
+
+1. User deposits USDT on Hyperliquid
+2. Vault mints proportional shares
+3. PPS updates as strategies generate yield
+4. User requests withdrawal
+5. Instant withdrawal if liquidity is available
+6. Otherwise, processed at epoch end
+7. Withdrawal claimable after 6-hour minimum period
