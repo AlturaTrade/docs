@@ -1,0 +1,93 @@
+---
+title: "On-Chain Verifiability"
+description: "Transparent, auditable, and independently observable."
+---
+
+## Overview
+
+Altura is built on HyperEVM, enabling full on-chain visibility into the vault’s performance, strategy execution, and accounting logic. Every component that impacts user value can be independently reviewed and verified.
+
+---
+
+## **Transparent Vault Accounting**
+
+All vault operations occur on-chain, allowing users to verify:
+
+- Total assets under management
+- Total shares in circulation
+- Price-per-share (PPS) changes over time
+- Net asset value (NAV) movement
+- Strategy allocations and rebalancing events
+
+PPS reflects real, realized strategy performance and cannot be arbitrarily adjusted.
+
+---
+
+## **Strategy-Level Transparency**
+
+While Altura abstracts complexity for users, all underlying strategy outputs are traceable on-chain, including:
+
+- Funding rate capture results
+- Arbitrage settlements
+- Staking reward inflows
+- Liquidity provision fee revenue
+
+Each strategy contributes directly to PPS growth and can be verified by examining the vault’s balance changes and oracle updates.
+
+---
+
+## **Oracle Update Transparency**
+
+PPS updates submitted by oracle reporters are:
+
+- visible on-chain
+- timestamped
+- signed by authorized reporter addresses
+- validated through protocol logic
+
+Users can confirm that:
+
+- PPS only increases when real yield is generated
+- No future-dated or stale reports are accepted
+
+Movement limits ensure fair and predictable updates
+
+---
+
+## **Withdrawal Queue Visibility**
+
+All withdrawal activity is fully verifiable:
+
+- Active withdrawal epochs
+- User-specific withdrawal requests
+- Liquidity availability
+- Claim eligibility after the minimum holding period
+
+Users can independently confirm their place in the epoch queue and the vault’s liquid balance before claiming.
+
+---
+
+## **No Off-Chain Yield Reliance, No Hidden Execution**
+
+Altura does not rely on:
+
+- off-chain trading
+- manual operators executing strategies
+- opaque yield sources
+- centralized custody environments
+
+All strategy execution and performance is settled on **Hyperliquid** or other integrated **on-chain venues**, enabling predictable, fully auditable outcomes. Where strategies involve off-chain components (e.g., RWAs), cashflows must **settle and reconcile on-chain** over the lifecycle of the position preserving institutional-grade oversight and transparency
+
+---
+
+## **Public Contract Addresses**
+
+All core components are deployed as immutable or timelocked contracts, including:
+
+- Vault contract
+- Share token
+- Oracle reporter
+- Pausing and governance roles
+- Strategy executors (where applicable)
+
+This architecture ensures that users can independently track contract interactions and validate protocol behavior without relying on Altura-operated interfaces.
