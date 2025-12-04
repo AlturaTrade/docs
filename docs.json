@@ -17,7 +17,7 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "deposit",
+              "strategies",
               "withdrawal",
               "oracle",
               "AVLT"
