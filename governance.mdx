@@ -1,0 +1,107 @@
+---
+title: "Governance & Protocol Roles"
+description: "Institutional, precise, transparent"
+---
+
+## Overview
+
+Altura is structured with a minimal and carefully separated role system to ensure operational safety, limited trust assumptions, and predictable governance. Each role has clearly defined permissions, enforced through on-chain access controls and timelocked actions.
+
+---
+
+## **Role Structure Overview**
+
+Altura uses a three-tier role system:
+
+- **Guardian** -Emergency authority
+- **Operator** - Oracle reporter & routine execution
+- **Timelock Admin** - Controlled configuration changes
+
+Each role is isolated to prevent unilateral control or permission over critical functions.
+
+### **Guardian Role (Emergency Controls)**
+
+The Guardian is responsible for activating and deactivating the **paused state** of the protocol.
+
+**Capabilities:**
+
+- Pause the vault
+- Unpause the vault
+- Trigger emergency protections
+
+**Limitations:**
+
+- Cannot move funds
+- Cannot modify strategies
+- Cannot alter PPS
+- Cannot change configuration parameters
+
+**Purpose:**
+
+To suspend activity during irregular behavior, oracle anomalies, or market instability.
+
+### **Operator Role (Oracle & Routine Execution)**
+
+The Operator executes routine tasks necessary to maintain accurate protocol performance.
+
+**Capabilities:**
+
+- Submit oracle price updates
+- Trigger harvest or reporting cycles
+- Perform non-value-moving administrative functions
+
+**Limitations:**
+
+- Cannot transfer assets
+- Cannot pause/unpause the protocol
+- Cannot modify core settings
+
+**Purpose:**
+
+To maintain accurate PPS updates and operational continuity.
+
+### **Timelock Admin (Governance Layer)**
+
+All configuration-level changes require execution through a **timelock contract**, creating transparency and predictable upgrade paths.
+
+**Capabilities (after delay):**
+
+- Update oracle reporter address
+- Update guardian/role assignments
+- Adjust configuration parameters
+- Approve new strategy modules (future scaling)
+
+**Limitations:**
+
+- Cannot bypass the timelock
+- Cannot execute immediate changes
+- Cannot move user assets
+
+**Purpose:**
+
+Provide a controlled governance layer with built-in protection against rushed or opaque changes.
+
+---
+
+## **Governance Principles**
+
+Altura adheres to strong governance standards:
+
+- **Transparency:** All role actions and timelocked operations are visible on-chain.
+- **Separation of Duties:** No single role can influence funds, PPS, or protocol safety alone.
+- **Predictability:** Timelocked execution ensures changes cannot be introduced unexpectedly.
+
+**Minimized Trust:** Fund movement is restricted to approved vault logic only.
+
+---
+
+## **Long-Term Governance Intent**
+
+As the protocol matures, governance may transition toward:
+
+- Multi-sig administration
+- Community governance modules
+- Institutional oversight frameworks
+- Risk councils or strategy oversight committees
+
+These transitions will follow conservative rollout processes to preserve protocol safety
