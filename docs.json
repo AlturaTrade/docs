@@ -17,10 +17,7 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "strategies",
-              "withdrawal",
-              "oracle",
-              "AVLT"
+              "strategies"
             ]
           },
           {
