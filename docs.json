@@ -37,6 +37,13 @@
               "verifiability",
               "governance"
             ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "faq",
+              "legal"
+            ]
           }
         ]
       }
