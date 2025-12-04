@@ -9,6 +9,15 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "anchors": [
+      {
+        "anchor": "Support",
+        "pages": [
+          "faq",
+          "legal"
+        ]
+      }
+    ],
     "tabs": [
       {
         "tab": "Guides",
