@@ -44,6 +44,12 @@
               "faq",
               "legal"
             ]
+          },
+          {
+            "group": "Security",
+            "pages": [
+              "audit"
+            ]
           }
         ]
       }
