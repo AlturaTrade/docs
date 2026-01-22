@@ -39,12 +39,6 @@
             ]
           },
           {
-            "group": "Pre Deposit",
-            "pages": [
-              "predeposit"
-            ]
-          },
-          {
             "group": "Support",
             "pages": [
               "faq",
