@@ -67,9 +67,8 @@
       "label": "Website",
       "href": "https://altura.trade"
     },
-    "secondary": [
+    "links": [
     {
-      "type": "button",
       "label": "Transparency",
       "href": "https://accountable.altura.trade/"
     }
