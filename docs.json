@@ -26,8 +26,7 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "strategies",
-              "whitepaper"
+              "strategies"
             ]
           },
           {
@@ -51,6 +50,12 @@
             "group": "Security",
             "pages": [
               "audit"
+            ]
+          },
+          {
+            "group": "Tokenomics",
+            "pages": [
+              "whitepaper"
             ]
           }
         ]
