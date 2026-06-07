@@ -102,5 +102,8 @@
       "telegram": "https://t.me/alturax",
       "github": "https://github.com/AlturaTrade/contracts"
     }
+  },
+  "fonts": {
+    "family": "Geist"
   }
 }
