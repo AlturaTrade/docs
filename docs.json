@@ -104,6 +104,11 @@
     }
   },
   "fonts": {
-    "family": "Geist"
+    "heading": {
+      "family": "Funnel Display"
+    },
+    "body": {
+      "family": "Geist"
+    }
   }
 }
